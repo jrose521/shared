@@ -1,0 +1,24 @@
+import requests
+
+
+url = 'https://api.nasa.gov/planetary/apod'
+
+
+
+
+headers = {
+    'Accepts': 'application/json',
+    
+}
+
+params = {
+    'api_key': '',#put your api key
+    'date': input('what date xxxx-xx-xx:' )
+}
+
+
+
+r = requests.get(url, headers=headers, params=params)
+
+print(r.status_code)
+print(r.text)
